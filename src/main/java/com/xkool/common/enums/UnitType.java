@@ -1,5 +1,8 @@
 package com.xkool.common.enums;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static com.xkool.common.constant.UnitTypeIdConstant.*;
 import static com.xkool.common.constant.UnitTypeNameConstant.*;
 
@@ -32,21 +35,25 @@ public enum UnitType {
         return id;
     }
 
-    public static String getUnitTypeNameById(int id) {
+    public static UnitType getUnitTypeById(int id) {
         for (UnitType unitType : UnitType.values()) {
             if (unitType.getId() == id) {
-                return unitType.getName();
+                return unitType;
             }
         }
         return null;
     }
 
-    public static Integer getUnitTypeIdByName(String name) {
+    public static UnitType getUnitTypeByName(String name) {
         for (UnitType unitType : UnitType.values()) {
             if (unitType.getName().equals(name)) {
-                return unitType.getId();
+                return unitType;
             }
         }
         return null;
+    }
+
+    public static List<UnitType> getUnitTypes() {
+        return Arrays.asList(UnitType.values());
     }
 }

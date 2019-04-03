@@ -1,5 +1,8 @@
 package com.xkool.common.enums;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static com.xkool.common.constant.HouseTypeIdConstant.*;
 import static com.xkool.common.constant.HouseTypeNameConstant.*;
 
@@ -30,21 +33,25 @@ public enum HouseType {
         return id;
     }
 
-    public static String getHouseTypeNameById(int id) {
+    public static HouseType getHouseTypeById(int id) {
         for (HouseType houseType : HouseType.values()) {
             if (houseType.getId() == id) {
-                return houseType.getName();
+                return houseType;
             }
         }
         return null;
     }
 
-    public static Integer getHouseTypeIdByName(String name) {
+    public static HouseType getHouseTypeByName(String name) {
         for (HouseType houseType : HouseType.values()) {
             if (houseType.getName().equals(name)) {
-                return houseType.getId();
+                return houseType;
             }
         }
         return null;
+    }
+
+    public static List<HouseType> getHouseTypes() {
+        return Arrays.asList(HouseType.values());
     }
 }

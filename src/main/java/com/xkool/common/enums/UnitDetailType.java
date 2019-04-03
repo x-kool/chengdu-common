@@ -79,31 +79,31 @@ public enum UnitDetailType {
     }
 
 
-    public static String getUnitDetailTypeNameById(int id) {
+    public static UnitDetailType getUnitDetailTypeNameById(int id) {
         for (UnitDetailType unitDetailType : UnitDetailType.values()) {
             if (unitDetailType.getId() == id) {
-                return unitDetailType.getName();
+                return unitDetailType;
             }
         }
         return null;
     }
 
-    public static Integer getUnitDetailTypeIdByName(String name) {
+    public static UnitDetailType getUnitDetailTypeIdByName(String name) {
         for (UnitDetailType unitDetailType : UnitDetailType.values()) {
             if (unitDetailType.getName().equals(name)) {
-                return unitDetailType.getId();
+                return unitDetailType;
             }
         }
         return null;
     }
 
-    public static List<Integer> getUnitDetailTypeIdsByUnitTypeId(int unitTypeId) {
-        List<Integer> unitDetailTypeIds = new ArrayList<Integer>();
+    public static List<UnitDetailType> getUnitDetailTypeIdsByUnitTypeId(int unitTypeId) {
+        List<UnitDetailType> unitDetailTypes = new ArrayList<UnitDetailType>();
         for (UnitDetailType unitDetailType : UnitDetailType.values()) {
             if (unitDetailType.getUnitTypeId() == unitTypeId) {
-                unitDetailTypeIds.add(unitDetailType.getId());
+                unitDetailTypes.add(unitDetailType);
             }
         }
-        return unitDetailTypeIds;
+        return unitDetailTypes;
     }
 }
