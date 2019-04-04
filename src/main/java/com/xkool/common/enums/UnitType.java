@@ -1,5 +1,6 @@
 package com.xkool.common.enums;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -51,6 +52,22 @@ public enum UnitType {
             }
         }
         return null;
+    }
+
+    List<UnitType> getResidenceUnitTypes() {
+        List<UnitType> unitTypes = new ArrayList<UnitType>();
+        for (UnitType unitType : UnitType.values()) {
+            if (unitType.getId() == HIGH_RISE_BUILDING_UNIT_TYPE_ID) {
+                unitTypes.add(unitType);
+            }
+            if (unitType.getId() == WESTERN_STYLE_HOUSE_UNIT_TYPE_ID) {
+                unitTypes.add(unitType);
+            }
+            if (unitType.getId() == VILLA_UNIT_TYPE_ID) {
+                unitTypes.add(unitType);
+            }
+        }
+        return unitTypes;
     }
 
     public static List<UnitType> getUnitTypes() {
