@@ -54,7 +54,7 @@ public enum UnitType {
         return null;
     }
 
-    List<UnitType> getResidenceUnitTypes() {
+    public static List<UnitType> getResidenceUnitTypes() {
         List<UnitType> unitTypes = new ArrayList<UnitType>();
         for (UnitType unitType : UnitType.values()) {
             if (unitType.getId() == HIGH_RISE_BUILDING_UNIT_TYPE_ID) {
