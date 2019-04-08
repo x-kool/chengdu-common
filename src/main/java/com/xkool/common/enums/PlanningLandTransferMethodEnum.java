@@ -6,7 +6,7 @@ import java.util.List;
 import static com.xkool.common.constant.PlanningLandTransferMethodIdConstant.*;
 import static com.xkool.common.constant.PlanningLandTransferMethodNameConstant.*;
 
-public enum PlanningLandTransferMethod {
+public enum PlanningLandTransferMethodEnum {
     LISTING_PLANNING_LAND_TRANSFER_METHOD(LISTING_PLANNING_LAND_TRANSFER_METHOD_ID, LISTING_PLANNING_LAND_TRANSFER_METHOD_NAME),
     AGREEMENT_TRANSFER_PLANNING_LAND_TRANSFER_METHOD(AGREEMENT_TRANSFER_PLANNING_LAND_TRANSFER_METHOD_ID, AGREEMENT_TRANSFER_PLANNING_LAND_TRANSFER_METHOD_NAME),
     TENDER_PLANNING_LAND_TRANSFER_METHOD(TENDER_PLANNING_LAND_TRANSFER_METHOD_ID, TENDER_PLANNING_LAND_TRANSFER_METHOD_NAME),
@@ -15,7 +15,7 @@ public enum PlanningLandTransferMethod {
     private int id;
     private String name;
 
-    PlanningLandTransferMethod(int id, String name) {
+    PlanningLandTransferMethodEnum(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -28,25 +28,25 @@ public enum PlanningLandTransferMethod {
         return id;
     }
 
-    public static PlanningLandTransferMethod getPlanningLandTransferMethodById(int id) {
-        for (PlanningLandTransferMethod planningLandTransferMethod : PlanningLandTransferMethod.values()) {
-            if (planningLandTransferMethod.getId() == id) {
-                return planningLandTransferMethod;
+    public static PlanningLandTransferMethodEnum getPlanningLandTransferMethodById(int id) {
+        for (PlanningLandTransferMethodEnum planningLandTransferMethodEnum : PlanningLandTransferMethodEnum.values()) {
+            if (planningLandTransferMethodEnum.getId() == id) {
+                return planningLandTransferMethodEnum;
             }
         }
         return null;
     }
 
-    public static PlanningLandTransferMethod getPlanningLandTransferMethodByName(String name) {
-        for (PlanningLandTransferMethod planningLandTransferMethod : PlanningLandTransferMethod.values()) {
-            if (planningLandTransferMethod.getName().equals(name)) {
-                return planningLandTransferMethod;
+    public static PlanningLandTransferMethodEnum getPlanningLandTransferMethodByName(String name) {
+        for (PlanningLandTransferMethodEnum planningLandTransferMethodEnum : PlanningLandTransferMethodEnum.values()) {
+            if (planningLandTransferMethodEnum.getName().equals(name)) {
+                return planningLandTransferMethodEnum;
             }
         }
         return null;
     }
 
-    public static List<PlanningLandTransferMethod> getPlanningLandTransferMethodList() {
-        return Arrays.asList(PlanningLandTransferMethod.values());
+    public static List<PlanningLandTransferMethodEnum> getPlanningLandTransferMethodList() {
+        return Arrays.asList(PlanningLandTransferMethodEnum.values());
     }
 }

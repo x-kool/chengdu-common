@@ -6,7 +6,7 @@ import java.util.List;
 import static com.xkool.common.constant.ProjectSaleStateIdConstant.*;
 import static com.xkool.common.constant.ProjectSaleStateNameConstant.*;
 
-public enum ProjectSaleState {
+public enum ProjectSaleStateEnum {
 
     UNSOLD_PROJECT_SALE_STATE(UNSOLD_PROJECT_SALE_STATE_ID, UNSOLD_PROJECT_SALE_STATE_NAME),
     SALE_PROJECT_SALE_STATE(SALE_PROJECT_SALE_STATE_ID, SALE_PROJECT_SALE_STATE_NAME),
@@ -16,7 +16,7 @@ public enum ProjectSaleState {
     private int id;
     private String name;
 
-    ProjectSaleState(int id, String name) {
+    ProjectSaleStateEnum(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -29,25 +29,25 @@ public enum ProjectSaleState {
         return id;
     }
 
-    public static ProjectSaleState getProjectSaleStateById(int id) {
-        for (ProjectSaleState projectSaleState : ProjectSaleState.values()) {
-            if (projectSaleState.getId() == id) {
-                return projectSaleState;
+    public static ProjectSaleStateEnum getProjectSaleStateById(int id) {
+        for (ProjectSaleStateEnum projectSaleStateEnum : ProjectSaleStateEnum.values()) {
+            if (projectSaleStateEnum.getId() == id) {
+                return projectSaleStateEnum;
             }
         }
         return null;
     }
 
-    public static ProjectSaleState getProjectSaleStateByName(String name) {
-        for (ProjectSaleState projectSaleState : ProjectSaleState.values()) {
-            if (projectSaleState.getName().equals(name)) {
-                return projectSaleState;
+    public static ProjectSaleStateEnum getProjectSaleStateByName(String name) {
+        for (ProjectSaleStateEnum projectSaleStateEnum : ProjectSaleStateEnum.values()) {
+            if (projectSaleStateEnum.getName().equals(name)) {
+                return projectSaleStateEnum;
             }
         }
         return null;
     }
 
-    public static List<ProjectSaleState> getProjectSaleStates() {
-        return Arrays.asList(ProjectSaleState.values());
+    public static List<ProjectSaleStateEnum> getProjectSaleStates() {
+        return Arrays.asList(ProjectSaleStateEnum.values());
     }
 }

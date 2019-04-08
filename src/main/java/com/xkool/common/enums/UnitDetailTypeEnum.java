@@ -9,7 +9,7 @@ import java.util.List;
 import static com.xkool.common.constant.UnitDetailTypeIdConstant.*;
 import static com.xkool.common.constant.UnitDetailTypeNameConstant.*;
 
-public enum UnitDetailType {
+public enum UnitDetailTypeEnum {
     HIGH_RISE_BUILDING(HIGH_RISE_BUILDING_UNIT_DETAIL_TYPE_ID,
             UnitTypeIdConstant.HIGH_RISE_BUILDING_UNIT_TYPE_ID,
             HIGH_RISE_BUILDING_UNIT_DETAIL_TYPE_NAME),
@@ -60,7 +60,7 @@ public enum UnitDetailType {
     private int unitTypeId;
     private String name;
 
-    UnitDetailType(int id, int unitTypeId, String name) {
+    UnitDetailTypeEnum(int id, int unitTypeId, String name) {
         this.id = id;
         this.unitTypeId = unitTypeId;
         this.name = name;
@@ -79,31 +79,31 @@ public enum UnitDetailType {
     }
 
 
-    public static UnitDetailType getUnitDetailTypeById(int id) {
-        for (UnitDetailType unitDetailType : UnitDetailType.values()) {
-            if (unitDetailType.getId() == id) {
-                return unitDetailType;
+    public static UnitDetailTypeEnum getUnitDetailTypeById(int id) {
+        for (UnitDetailTypeEnum unitDetailTypeEnum : UnitDetailTypeEnum.values()) {
+            if (unitDetailTypeEnum.getId() == id) {
+                return unitDetailTypeEnum;
             }
         }
         return null;
     }
 
-    public static UnitDetailType getUnitDetailTypeByName(String name) {
-        for (UnitDetailType unitDetailType : UnitDetailType.values()) {
-            if (unitDetailType.getName().equals(name)) {
-                return unitDetailType;
+    public static UnitDetailTypeEnum getUnitDetailTypeByName(String name) {
+        for (UnitDetailTypeEnum unitDetailTypeEnum : UnitDetailTypeEnum.values()) {
+            if (unitDetailTypeEnum.getName().equals(name)) {
+                return unitDetailTypeEnum;
             }
         }
         return null;
     }
 
-    public static List<UnitDetailType> getUnitDetailTypesByUnitTypeId(int unitTypeId) {
-        List<UnitDetailType> unitDetailTypes = new ArrayList<UnitDetailType>();
-        for (UnitDetailType unitDetailType : UnitDetailType.values()) {
-            if (unitDetailType.getUnitTypeId() == unitTypeId) {
-                unitDetailTypes.add(unitDetailType);
+    public static List<UnitDetailTypeEnum> getUnitDetailTypesByUnitTypeId(int unitTypeId) {
+        List<UnitDetailTypeEnum> unitDetailTypeEnums = new ArrayList<UnitDetailTypeEnum>();
+        for (UnitDetailTypeEnum unitDetailTypeEnum : UnitDetailTypeEnum.values()) {
+            if (unitDetailTypeEnum.getUnitTypeId() == unitTypeId) {
+                unitDetailTypeEnums.add(unitDetailTypeEnum);
             }
         }
-        return unitDetailTypes;
+        return unitDetailTypeEnums;
     }
 }

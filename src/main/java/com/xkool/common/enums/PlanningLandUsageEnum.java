@@ -6,7 +6,7 @@ import java.util.List;
 import static com.xkool.common.constant.PlanningLandUsageIdConstant.*;
 import static com.xkool.common.constant.PlanningLandUsageNameConstant.*;
 
-public enum PlanningLandUsage {
+public enum PlanningLandUsageEnum {
 
     RESIDENTIAL_PLANNING_LAND_USAGE(RESIDENTIAL_PLANNING_LAND_USAGE_ID, RESIDENTIAL_PLANNING_LAND_USAGE_NAME),
     TYPE_ONE_RESIDENTIAL_PLANNING_LAND_USAGE(TYPE_ONE_RESIDENTIAL_PLANNING_LAND_USAGE_ID, TYPE_ONE_RESIDENTIAL_PLANNING_LAND_USAGE_NAME),
@@ -43,7 +43,7 @@ public enum PlanningLandUsage {
     private int id;
     private String name;
 
-    PlanningLandUsage(int id, String name) {
+    PlanningLandUsageEnum(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -56,25 +56,25 @@ public enum PlanningLandUsage {
         return id;
     }
 
-    public static PlanningLandUsage getPlanningLandUsageById(int id) {
-        for (PlanningLandUsage planningLandUsage : PlanningLandUsage.values()) {
-            if (planningLandUsage.getId() == id) {
-                return planningLandUsage;
+    public static PlanningLandUsageEnum getPlanningLandUsageById(int id) {
+        for (PlanningLandUsageEnum planningLandUsageEnum : PlanningLandUsageEnum.values()) {
+            if (planningLandUsageEnum.getId() == id) {
+                return planningLandUsageEnum;
             }
         }
         return null;
     }
 
-    public static PlanningLandUsage getPlanningLandUsageByName(String name) {
-        for (PlanningLandUsage planningLandUsage : PlanningLandUsage.values()) {
-            if (planningLandUsage.getName().equals(name)) {
-                return planningLandUsage;
+    public static PlanningLandUsageEnum getPlanningLandUsageByName(String name) {
+        for (PlanningLandUsageEnum planningLandUsageEnum : PlanningLandUsageEnum.values()) {
+            if (planningLandUsageEnum.getName().equals(name)) {
+                return planningLandUsageEnum;
             }
         }
         return null;
     }
 
-    public static List<PlanningLandUsage> getPlanningLandUsages() {
-        return Arrays.asList(PlanningLandUsage.values());
+    public static List<PlanningLandUsageEnum> getPlanningLandUsages() {
+        return Arrays.asList(PlanningLandUsageEnum.values());
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 import static com.xkool.common.constant.UnitTypeIdConstant.*;
 import static com.xkool.common.constant.UnitTypeNameConstant.*;
 
-public enum UnitType {
+public enum UnitTypeEnum {
     HIGH_RISE_BUILDING(HIGH_RISE_BUILDING_UNIT_TYPE_ID, HIGH_RISE_BUILDING_UNIT_TYPE_NAME),
     WESTERN_STYLE_HOUSE(WESTERN_STYLE_HOUSE_UNIT_TYPE_ID, WESTERN_STYLE_HOUSE_UNIT_TYPE_NAME),
     VILLA(VILLA_UNIT_TYPE_ID, VILLA_UNIT_TYPE_NAME),
@@ -23,7 +23,7 @@ public enum UnitType {
     private int id;
     private String name;
 
-    UnitType(int id, String name) {
+    UnitTypeEnum(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -36,41 +36,41 @@ public enum UnitType {
         return id;
     }
 
-    public static UnitType getUnitTypeById(int id) {
-        for (UnitType unitType : UnitType.values()) {
-            if (unitType.getId() == id) {
-                return unitType;
+    public static UnitTypeEnum getUnitTypeById(int id) {
+        for (UnitTypeEnum unitTypeEnum : UnitTypeEnum.values()) {
+            if (unitTypeEnum.getId() == id) {
+                return unitTypeEnum;
             }
         }
         return null;
     }
 
-    public static UnitType getUnitTypeByName(String name) {
-        for (UnitType unitType : UnitType.values()) {
-            if (unitType.getName().equals(name)) {
-                return unitType;
+    public static UnitTypeEnum getUnitTypeByName(String name) {
+        for (UnitTypeEnum unitTypeEnum : UnitTypeEnum.values()) {
+            if (unitTypeEnum.getName().equals(name)) {
+                return unitTypeEnum;
             }
         }
         return null;
     }
 
-    public static List<UnitType> getResidenceUnitTypes() {
-        List<UnitType> unitTypes = new ArrayList<UnitType>();
-        for (UnitType unitType : UnitType.values()) {
-            if (unitType.getId() == HIGH_RISE_BUILDING_UNIT_TYPE_ID) {
-                unitTypes.add(unitType);
+    public static List<UnitTypeEnum> getResidenceUnitTypes() {
+        List<UnitTypeEnum> unitTypeEnums = new ArrayList<UnitTypeEnum>();
+        for (UnitTypeEnum unitTypeEnum : UnitTypeEnum.values()) {
+            if (unitTypeEnum.getId() == HIGH_RISE_BUILDING_UNIT_TYPE_ID) {
+                unitTypeEnums.add(unitTypeEnum);
             }
-            if (unitType.getId() == WESTERN_STYLE_HOUSE_UNIT_TYPE_ID) {
-                unitTypes.add(unitType);
+            if (unitTypeEnum.getId() == WESTERN_STYLE_HOUSE_UNIT_TYPE_ID) {
+                unitTypeEnums.add(unitTypeEnum);
             }
-            if (unitType.getId() == VILLA_UNIT_TYPE_ID) {
-                unitTypes.add(unitType);
+            if (unitTypeEnum.getId() == VILLA_UNIT_TYPE_ID) {
+                unitTypeEnums.add(unitTypeEnum);
             }
         }
-        return unitTypes;
+        return unitTypeEnums;
     }
 
-    public static List<UnitType> getUnitTypes() {
-        return Arrays.asList(UnitType.values());
+    public static List<UnitTypeEnum> getUnitTypes() {
+        return Arrays.asList(UnitTypeEnum.values());
     }
 }
