@@ -56,7 +56,7 @@ public enum PlanningLandUsageEnum {
         return id;
     }
 
-    public static PlanningLandUsageEnum getPlanningLandUsageById(int id) {
+    public static PlanningLandUsageEnum getPlanningLandUsageEnumById(int id) {
         for (PlanningLandUsageEnum planningLandUsageEnum : PlanningLandUsageEnum.values()) {
             if (planningLandUsageEnum.getId() == id) {
                 return planningLandUsageEnum;
@@ -65,7 +65,7 @@ public enum PlanningLandUsageEnum {
         return null;
     }
 
-    public static PlanningLandUsageEnum getPlanningLandUsageByName(String name) {
+    public static PlanningLandUsageEnum getPlanningLandUsageEnumByName(String name) {
         for (PlanningLandUsageEnum planningLandUsageEnum : PlanningLandUsageEnum.values()) {
             if (planningLandUsageEnum.getName().equals(name)) {
                 return planningLandUsageEnum;
@@ -74,7 +74,7 @@ public enum PlanningLandUsageEnum {
         return null;
     }
 
-    public static List<PlanningLandUsageEnum> getPlanningLandUsages() {
+    public static List<PlanningLandUsageEnum> getPlanningLandUsageEnums() {
         return Arrays.asList(PlanningLandUsageEnum.values());
     }
 }

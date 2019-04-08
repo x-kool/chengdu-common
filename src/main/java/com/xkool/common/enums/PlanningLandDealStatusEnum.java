@@ -30,7 +30,7 @@ public enum PlanningLandDealStatusEnum {
         return id;
     }
 
-    public static PlanningLandDealStatusEnum getPlanningLandDealStatusById(int id) {
+    public static PlanningLandDealStatusEnum getPlanningLandDealStatusEnumById(int id) {
         for (PlanningLandDealStatusEnum planningLandDealStatusEnum : PlanningLandDealStatusEnum.values()) {
             if (planningLandDealStatusEnum.getId() == id) {
                 return planningLandDealStatusEnum;
@@ -39,7 +39,7 @@ public enum PlanningLandDealStatusEnum {
         return null;
     }
 
-    public static PlanningLandDealStatusEnum getPlanningLandDealStatusByName(String name) {
+    public static PlanningLandDealStatusEnum getPlanningLandDealStatusEnumByName(String name) {
         for (PlanningLandDealStatusEnum planningLandDealStatusEnum : PlanningLandDealStatusEnum.values()) {
             if (planningLandDealStatusEnum.getName().equals(name)) {
                 return planningLandDealStatusEnum;
@@ -48,7 +48,7 @@ public enum PlanningLandDealStatusEnum {
         return null;
     }
 
-    public static List<PlanningLandDealStatusEnum> getPlanningLandDealStatusList() {
+    public static List<PlanningLandDealStatusEnum> getPlanningLandDealStatusEnums() {
         return Arrays.asList(PlanningLandDealStatusEnum.values());
     }
 }

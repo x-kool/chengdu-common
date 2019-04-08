@@ -33,7 +33,7 @@ public enum HouseTypeEnum {
         return id;
     }
 
-    public static HouseTypeEnum getHouseTypeById(int id) {
+    public static HouseTypeEnum getHouseTypeEnumById(int id) {
         for (HouseTypeEnum houseTypeEnum : HouseTypeEnum.values()) {
             if (houseTypeEnum.getId() == id) {
                 return houseTypeEnum;
@@ -42,7 +42,7 @@ public enum HouseTypeEnum {
         return null;
     }
 
-    public static HouseTypeEnum getHouseTypeByName(String name) {
+    public static HouseTypeEnum getHouseTypeEnumByName(String name) {
         for (HouseTypeEnum houseTypeEnum : HouseTypeEnum.values()) {
             if (houseTypeEnum.getName().equals(name)) {
                 return houseTypeEnum;
@@ -51,7 +51,7 @@ public enum HouseTypeEnum {
         return null;
     }
 
-    public static List<HouseTypeEnum> getHouseTypes() {
+    public static List<HouseTypeEnum> getHouseTypeEnums() {
         return Arrays.asList(HouseTypeEnum.values());
     }
 }

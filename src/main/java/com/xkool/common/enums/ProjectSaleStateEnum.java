@@ -29,7 +29,7 @@ public enum ProjectSaleStateEnum {
         return id;
     }
 
-    public static ProjectSaleStateEnum getProjectSaleStateById(int id) {
+    public static ProjectSaleStateEnum getProjectSaleStateEnumById(int id) {
         for (ProjectSaleStateEnum projectSaleStateEnum : ProjectSaleStateEnum.values()) {
             if (projectSaleStateEnum.getId() == id) {
                 return projectSaleStateEnum;
@@ -38,7 +38,7 @@ public enum ProjectSaleStateEnum {
         return null;
     }
 
-    public static ProjectSaleStateEnum getProjectSaleStateByName(String name) {
+    public static ProjectSaleStateEnum getProjectSaleStateEnumByName(String name) {
         for (ProjectSaleStateEnum projectSaleStateEnum : ProjectSaleStateEnum.values()) {
             if (projectSaleStateEnum.getName().equals(name)) {
                 return projectSaleStateEnum;
@@ -47,7 +47,7 @@ public enum ProjectSaleStateEnum {
         return null;
     }
 
-    public static List<ProjectSaleStateEnum> getProjectSaleStates() {
+    public static List<ProjectSaleStateEnum> getProjectSaleStateEnums() {
         return Arrays.asList(ProjectSaleStateEnum.values());
     }
 }

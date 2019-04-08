@@ -79,7 +79,7 @@ public enum UnitDetailTypeEnum {
     }
 
 
-    public static UnitDetailTypeEnum getUnitDetailTypeById(int id) {
+    public static UnitDetailTypeEnum getUnitDetailTypeEnumById(int id) {
         for (UnitDetailTypeEnum unitDetailTypeEnum : UnitDetailTypeEnum.values()) {
             if (unitDetailTypeEnum.getId() == id) {
                 return unitDetailTypeEnum;
@@ -88,7 +88,7 @@ public enum UnitDetailTypeEnum {
         return null;
     }
 
-    public static UnitDetailTypeEnum getUnitDetailTypeByName(String name) {
+    public static UnitDetailTypeEnum getUnitDetailTypeEnumByName(String name) {
         for (UnitDetailTypeEnum unitDetailTypeEnum : UnitDetailTypeEnum.values()) {
             if (unitDetailTypeEnum.getName().equals(name)) {
                 return unitDetailTypeEnum;
@@ -97,7 +97,7 @@ public enum UnitDetailTypeEnum {
         return null;
     }
 
-    public static List<UnitDetailTypeEnum> getUnitDetailTypesByUnitTypeId(int unitTypeId) {
+    public static List<UnitDetailTypeEnum> getUnitDetailTypeEnumsByUnitTypeId(int unitTypeId) {
         List<UnitDetailTypeEnum> unitDetailTypeEnums = new ArrayList<UnitDetailTypeEnum>();
         for (UnitDetailTypeEnum unitDetailTypeEnum : UnitDetailTypeEnum.values()) {
             if (unitDetailTypeEnum.getUnitTypeId() == unitTypeId) {

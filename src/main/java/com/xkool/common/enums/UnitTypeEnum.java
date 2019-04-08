@@ -36,7 +36,7 @@ public enum UnitTypeEnum {
         return id;
     }
 
-    public static UnitTypeEnum getUnitTypeById(int id) {
+    public static UnitTypeEnum getUnitTypeEnumById(int id) {
         for (UnitTypeEnum unitTypeEnum : UnitTypeEnum.values()) {
             if (unitTypeEnum.getId() == id) {
                 return unitTypeEnum;
@@ -45,7 +45,7 @@ public enum UnitTypeEnum {
         return null;
     }
 
-    public static UnitTypeEnum getUnitTypeByName(String name) {
+    public static UnitTypeEnum getUnitTypeEnumByName(String name) {
         for (UnitTypeEnum unitTypeEnum : UnitTypeEnum.values()) {
             if (unitTypeEnum.getName().equals(name)) {
                 return unitTypeEnum;
@@ -54,7 +54,7 @@ public enum UnitTypeEnum {
         return null;
     }
 
-    public static List<UnitTypeEnum> getResidenceUnitTypes() {
+    public static List<UnitTypeEnum> getResidenceUnitTypeEnums() {
         List<UnitTypeEnum> unitTypeEnums = new ArrayList<UnitTypeEnum>();
         for (UnitTypeEnum unitTypeEnum : UnitTypeEnum.values()) {
             if (unitTypeEnum.getId() == HIGH_RISE_BUILDING_UNIT_TYPE_ID) {
@@ -70,7 +70,7 @@ public enum UnitTypeEnum {
         return unitTypeEnums;
     }
 
-    public static List<UnitTypeEnum> getUnitTypes() {
+    public static List<UnitTypeEnum> getUnitTypeEnums() {
         return Arrays.asList(UnitTypeEnum.values());
     }
 }

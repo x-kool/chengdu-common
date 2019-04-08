@@ -28,7 +28,7 @@ public enum PlanningLandTransferMethodEnum {
         return id;
     }
 
-    public static PlanningLandTransferMethodEnum getPlanningLandTransferMethodById(int id) {
+    public static PlanningLandTransferMethodEnum getPlanningLandTransferMethodEnumById(int id) {
         for (PlanningLandTransferMethodEnum planningLandTransferMethodEnum : PlanningLandTransferMethodEnum.values()) {
             if (planningLandTransferMethodEnum.getId() == id) {
                 return planningLandTransferMethodEnum;
@@ -37,7 +37,7 @@ public enum PlanningLandTransferMethodEnum {
         return null;
     }
 
-    public static PlanningLandTransferMethodEnum getPlanningLandTransferMethodByName(String name) {
+    public static PlanningLandTransferMethodEnum getPlanningLandTransferMethodEnumByName(String name) {
         for (PlanningLandTransferMethodEnum planningLandTransferMethodEnum : PlanningLandTransferMethodEnum.values()) {
             if (planningLandTransferMethodEnum.getName().equals(name)) {
                 return planningLandTransferMethodEnum;
@@ -46,7 +46,7 @@ public enum PlanningLandTransferMethodEnum {
         return null;
     }
 
-    public static List<PlanningLandTransferMethodEnum> getPlanningLandTransferMethodList() {
+    public static List<PlanningLandTransferMethodEnum> getPlanningLandTransferMethodEnums() {
         return Arrays.asList(PlanningLandTransferMethodEnum.values());
     }
 }

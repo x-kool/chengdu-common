@@ -28,7 +28,7 @@ public enum MarketNewsTypeEnum {
         return id;
     }
 
-    public static MarketNewsTypeEnum getMarketNewsTypeById(int id) {
+    public static MarketNewsTypeEnum getMarketNewsTypeEnumById(int id) {
         for (MarketNewsTypeEnum marketNewsTypeEnum : MarketNewsTypeEnum.values()) {
             if (marketNewsTypeEnum.getId() == id) {
                 return marketNewsTypeEnum;
@@ -37,7 +37,7 @@ public enum MarketNewsTypeEnum {
         return null;
     }
 
-    public static MarketNewsTypeEnum getMarketNewsTypeByName(String name) {
+    public static MarketNewsTypeEnum getMarketNewsTypeEnumByName(String name) {
         for (MarketNewsTypeEnum marketNewsTypeEnum : MarketNewsTypeEnum.values()) {
             if (marketNewsTypeEnum.getName().equals(name)) {
                 return marketNewsTypeEnum;
@@ -46,7 +46,7 @@ public enum MarketNewsTypeEnum {
         return null;
     }
 
-    public static List<MarketNewsTypeEnum> getMarketNewsTypes() {
+    public static List<MarketNewsTypeEnum> getMarketNewsTypeEnums() {
         return Arrays.asList(MarketNewsTypeEnum.values());
     }
 }
