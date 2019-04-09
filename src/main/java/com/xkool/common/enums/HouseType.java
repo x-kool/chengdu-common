@@ -6,7 +6,7 @@ import java.util.List;
 import static com.xkool.common.constant.HouseTypeIdConstant.*;
 import static com.xkool.common.constant.HouseTypeNameConstant.*;
 
-public enum HouseTypeEnum {
+public enum HouseType {
 
     SINGLE_BEDROOM(SINGLE_BEDROOM_HOUSE_TYPE_ID, SINGLE_BEDROOM_HOUSE_TYPE_NAME),
     ONE_BEDROOM(ONE_BEDROOM_HOUSE_TYPE_ID, ONE_BEDROOM_HOUSE_TYPE_NAME),
@@ -20,7 +20,7 @@ public enum HouseTypeEnum {
     private int id;
     private String name;
 
-    HouseTypeEnum(int id, String name) {
+    HouseType(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -33,25 +33,25 @@ public enum HouseTypeEnum {
         return id;
     }
 
-    public static HouseTypeEnum getHouseTypeEnumById(int id) {
-        for (HouseTypeEnum houseTypeEnum : HouseTypeEnum.values()) {
-            if (houseTypeEnum.getId() == id) {
-                return houseTypeEnum;
+    public static HouseType getHouseTypeById(int id) {
+        for (HouseType houseType : HouseType.values()) {
+            if (houseType.getId() == id) {
+                return houseType;
             }
         }
         return null;
     }
 
-    public static HouseTypeEnum getHouseTypeEnumByName(String name) {
-        for (HouseTypeEnum houseTypeEnum : HouseTypeEnum.values()) {
-            if (houseTypeEnum.getName().equals(name)) {
-                return houseTypeEnum;
+    public static HouseType getHouseTypeByName(String name) {
+        for (HouseType houseType : HouseType.values()) {
+            if (houseType.getName().equals(name)) {
+                return houseType;
             }
         }
         return null;
     }
 
-    public static List<HouseTypeEnum> getHouseTypeEnums() {
-        return Arrays.asList(HouseTypeEnum.values());
+    public static List<HouseType> getHouseTypes() {
+        return Arrays.asList(HouseType.values());
     }
 }

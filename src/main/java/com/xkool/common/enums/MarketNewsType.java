@@ -6,7 +6,7 @@ import java.util.List;
 import static com.xkool.common.constant.MarketNewsTypeIdConstant.*;
 import static com.xkool.common.constant.MarketNewsTypeNameConstant.*;
 
-public enum MarketNewsTypeEnum {
+public enum MarketNewsType {
 
     ESTATE_MARKET_POLICY_MARKET_NEWS_TYPE(ESTATE_MARKET_POLICY_MARKET_NEWS_TYPE_ID, ESTATE_MARKET_POLICY_MARKET_NEWS_TYPE_NAME),
     MONTHLY_PAYMENTS_SITUATION_MARKET_NEWS_TYPE(MONTHLY_PAYMENTS_SITUATION_MARKET_NEWS_TYPE_ID, MONTHLY_PAYMENTS_SITUATION_MARKET_NEWS_TYPE_NAME),
@@ -15,7 +15,7 @@ public enum MarketNewsTypeEnum {
     private int id;
     private String name;
 
-    MarketNewsTypeEnum(int id, String name) {
+    MarketNewsType(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -28,25 +28,25 @@ public enum MarketNewsTypeEnum {
         return id;
     }
 
-    public static MarketNewsTypeEnum getMarketNewsTypeEnumById(int id) {
-        for (MarketNewsTypeEnum marketNewsTypeEnum : MarketNewsTypeEnum.values()) {
-            if (marketNewsTypeEnum.getId() == id) {
-                return marketNewsTypeEnum;
+    public static MarketNewsType getMarketNewsTypeById(int id) {
+        for (MarketNewsType marketNewsType : MarketNewsType.values()) {
+            if (marketNewsType.getId() == id) {
+                return marketNewsType;
             }
         }
         return null;
     }
 
-    public static MarketNewsTypeEnum getMarketNewsTypeEnumByName(String name) {
-        for (MarketNewsTypeEnum marketNewsTypeEnum : MarketNewsTypeEnum.values()) {
-            if (marketNewsTypeEnum.getName().equals(name)) {
-                return marketNewsTypeEnum;
+    public static MarketNewsType getMarketNewsTypeByName(String name) {
+        for (MarketNewsType marketNewsType : MarketNewsType.values()) {
+            if (marketNewsType.getName().equals(name)) {
+                return marketNewsType;
             }
         }
         return null;
     }
 
-    public static List<MarketNewsTypeEnum> getMarketNewsTypeEnums() {
-        return Arrays.asList(MarketNewsTypeEnum.values());
+    public static List<MarketNewsType> getMarketNewsTypes() {
+        return Arrays.asList(MarketNewsType.values());
     }
 }
