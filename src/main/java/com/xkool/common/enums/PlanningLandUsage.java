@@ -1,11 +1,16 @@
 package com.xkool.common.enums;
 
+import com.alibaba.fastjson.annotation.JSONType;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Arrays;
 import java.util.List;
 
 import static com.xkool.common.constant.PlanningLandUsageIdConstant.*;
 import static com.xkool.common.constant.PlanningLandUsageNameConstant.*;
 
+@JSONType(serializeEnumAsJavaBean = true)
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum PlanningLandUsage {
 
     RESIDENTIAL_PLANNING_LAND_USAGE(RESIDENTIAL_PLANNING_LAND_USAGE_ID, RESIDENTIAL_PLANNING_LAND_USAGE_NAME),

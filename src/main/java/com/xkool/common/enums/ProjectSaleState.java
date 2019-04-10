@@ -1,11 +1,16 @@
 package com.xkool.common.enums;
 
+import com.alibaba.fastjson.annotation.JSONType;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Arrays;
 import java.util.List;
 
 import static com.xkool.common.constant.ProjectSaleStateIdConstant.*;
 import static com.xkool.common.constant.ProjectSaleStateNameConstant.*;
 
+@JSONType(serializeEnumAsJavaBean = true)
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ProjectSaleState {
 
     UNSOLD_PROJECT_SALE_STATE(UNSOLD_PROJECT_SALE_STATE_ID, UNSOLD_PROJECT_SALE_STATE_NAME),

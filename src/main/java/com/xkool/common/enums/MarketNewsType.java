@@ -1,11 +1,16 @@
 package com.xkool.common.enums;
 
+import com.alibaba.fastjson.annotation.JSONType;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Arrays;
 import java.util.List;
 
 import static com.xkool.common.constant.MarketNewsTypeIdConstant.*;
 import static com.xkool.common.constant.MarketNewsTypeNameConstant.*;
 
+@JSONType(serializeEnumAsJavaBean = true)
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum MarketNewsType {
 
     ESTATE_MARKET_POLICY_MARKET_NEWS_TYPE(ESTATE_MARKET_POLICY_MARKET_NEWS_TYPE_ID, ESTATE_MARKET_POLICY_MARKET_NEWS_TYPE_NAME),

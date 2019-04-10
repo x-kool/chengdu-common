@@ -1,5 +1,8 @@
 package com.xkool.common.enums;
 
+import com.alibaba.fastjson.annotation.JSONType;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,6 +10,8 @@ import java.util.List;
 import static com.xkool.common.constant.UnitTypeIdConstant.*;
 import static com.xkool.common.constant.UnitTypeNameConstant.*;
 
+@JSONType(serializeEnumAsJavaBean = true)
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum UnitType {
     HIGH_RISE_BUILDING(HIGH_RISE_BUILDING_UNIT_TYPE_ID, HIGH_RISE_BUILDING_UNIT_TYPE_NAME),
     WESTERN_STYLE_HOUSE(WESTERN_STYLE_HOUSE_UNIT_TYPE_ID, WESTERN_STYLE_HOUSE_UNIT_TYPE_NAME),

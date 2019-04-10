@@ -1,11 +1,16 @@
 package com.xkool.common.enums;
 
+import com.alibaba.fastjson.annotation.JSONType;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Arrays;
 import java.util.List;
 
 import static com.xkool.common.constant.PlanningLandTransferMethodIdConstant.*;
 import static com.xkool.common.constant.PlanningLandTransferMethodNameConstant.*;
 
+@JSONType(serializeEnumAsJavaBean = true)
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum PlanningLandTransferMethod {
     LISTING_PLANNING_LAND_TRANSFER_METHOD(LISTING_PLANNING_LAND_TRANSFER_METHOD_ID, LISTING_PLANNING_LAND_TRANSFER_METHOD_NAME),
     AGREEMENT_TRANSFER_PLANNING_LAND_TRANSFER_METHOD(AGREEMENT_TRANSFER_PLANNING_LAND_TRANSFER_METHOD_ID, AGREEMENT_TRANSFER_PLANNING_LAND_TRANSFER_METHOD_NAME),
