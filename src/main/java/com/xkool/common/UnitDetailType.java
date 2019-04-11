@@ -10,6 +10,10 @@ public class UnitDetailType {
     private int unitTypeId;
     private String name;
 
+    public UnitDetailType() {
+
+    }
+
     public UnitDetailType(int id, int unitTypeId, String name) {
         this.id = id;
         this.unitTypeId = unitTypeId;

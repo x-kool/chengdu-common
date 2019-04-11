@@ -8,6 +8,9 @@ public class HouseType {
     private int id;
     private String name;
 
+    public HouseType() {
+    }
+
     public HouseType(int id, String name) {
         this.id = id;
         this.name = name;
