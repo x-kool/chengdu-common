@@ -9,6 +9,9 @@ public class PlanningLandUsage {
     private int parentId;
     private String name;
 
+    public PlanningLandUsage() {
+    }
+
     public PlanningLandUsage(int id, int parentId, String name) {
         this.id = id;
         this.parentId = parentId;
