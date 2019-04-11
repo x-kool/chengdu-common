@@ -1,4 +1,6 @@
-package com.xkool.common;
+package com.xkool.common.constant;
+
+import com.xkool.common.PlanningLandDealStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.Optional;
 import static com.xkool.common.constant.PlanningLandDealStatusIdConstant.*;
 import static com.xkool.common.constant.PlanningLandDealStatusNameConstant.*;
 
-public class PlanningLandDealStatusDO {
+public class PlanningLandDealStatusConstant {
 
     public static List<PlanningLandDealStatus> planningLandDealStatuses = new ArrayList<PlanningLandDealStatus>() {
         {

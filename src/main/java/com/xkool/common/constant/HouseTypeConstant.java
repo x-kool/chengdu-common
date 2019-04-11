@@ -1,4 +1,6 @@
-package com.xkool.common;
+package com.xkool.common.constant;
+
+import com.xkool.common.HouseType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.Optional;
 import static com.xkool.common.constant.HouseTypeIdConstant.*;
 import static com.xkool.common.constant.HouseTypeNameConstant.*;
 
-public class HouseTypeDO {
+public class HouseTypeConstant {
 
     public static List<HouseType> houseTypes = new ArrayList<HouseType>() {
         {

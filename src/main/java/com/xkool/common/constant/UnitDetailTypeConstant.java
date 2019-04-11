@@ -1,5 +1,7 @@
-package com.xkool.common;
+package com.xkool.common.constant;
 
+
+import com.xkool.common.UnitDetailType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ import static com.xkool.common.constant.UnitDetailTypeIdConstant.*;
 import static com.xkool.common.constant.UnitDetailTypeNameConstant.*;
 import static com.xkool.common.constant.UnitTypeIdConstant.*;
 
-public class UnitDetailTypeDO {
+public class UnitDetailTypeConstant {
 
     public static List<UnitDetailType> unitDetailTypes = new ArrayList<UnitDetailType>() {
         {

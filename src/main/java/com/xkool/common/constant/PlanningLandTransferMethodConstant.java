@@ -1,4 +1,6 @@
-package com.xkool.common;
+package com.xkool.common.constant;
+
+import com.xkool.common.PlanningLandTransferMethod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.Optional;
 import static com.xkool.common.constant.PlanningLandTransferMethodIdConstant.*;
 import static com.xkool.common.constant.PlanningLandTransferMethodNameConstant.*;
 
-public class PlanningLandTransferMethodDO {
+public class PlanningLandTransferMethodConstant {
 
     public static List<PlanningLandTransferMethod> planningLandTransferMethods
             = new ArrayList<PlanningLandTransferMethod>() {

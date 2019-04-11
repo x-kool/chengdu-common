@@ -1,4 +1,6 @@
-package com.xkool.common;
+package com.xkool.common.constant;
+
+import com.xkool.common.MarketNewsType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.Optional;
 import static com.xkool.common.constant.MarketNewsTypeIdConstant.*;
 import static com.xkool.common.constant.MarketNewsTypeNameConstant.*;
 
-public class MarketNewsTypeDO {
+public class MarketNewsTypeConstant {
 
     public static List<MarketNewsType> marketNewsTypes = new ArrayList<MarketNewsType>() {
         {

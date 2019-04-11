@@ -9,7 +9,7 @@ public class MarketNewsType {
     private int id;
     private String name;
 
-    MarketNewsType(int id, String name) {
+    public MarketNewsType(int id, String name) {
         this.id = id;
         this.name = name;
     }

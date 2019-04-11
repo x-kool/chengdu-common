@@ -8,7 +8,7 @@ public class PlanningLandTransferMethod {
     private int id;
     private String name;
 
-    PlanningLandTransferMethod(int id, String name) {
+    public PlanningLandTransferMethod(int id, String name) {
         this.id = id;
         this.name = name;
     }

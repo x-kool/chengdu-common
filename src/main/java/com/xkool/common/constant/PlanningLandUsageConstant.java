@@ -1,4 +1,6 @@
-package com.xkool.common;
+package com.xkool.common.constant;
+
+import com.xkool.common.PlanningLandUsage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.stream.Collectors;
 import static com.xkool.common.constant.PlanningLandUsageIdConstant.*;
 import static com.xkool.common.constant.PlanningLandUsageNameConstant.*;
 
-public class PlanningLandUsageDO {
+public class PlanningLandUsageConstant {
 
     public static List<PlanningLandUsage> planningLandUsages = new ArrayList<PlanningLandUsage>() {
         {

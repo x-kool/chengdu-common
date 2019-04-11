@@ -9,7 +9,7 @@ public class PlanningLandUsage {
     private int parentId;
     private String name;
 
-    PlanningLandUsage(int id, int parentId, String name) {
+    public PlanningLandUsage(int id, int parentId, String name) {
         this.id = id;
         this.parentId = parentId;
         this.name = name;

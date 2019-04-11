@@ -8,7 +8,7 @@ public class UnitType {
     private int id;
     private String name;
 
-    UnitType(int id, String name) {
+    public UnitType(int id, String name) {
         this.id = id;
         this.name = name;
     }

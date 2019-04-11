@@ -1,5 +1,6 @@
-package com.xkool.common;
+package com.xkool.common.constant;
 
+import com.xkool.common.ProjectSaleState;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import static com.xkool.common.constant.ProjectSaleStateIdConstant.*;
 import static com.xkool.common.constant.ProjectSaleStateNameConstant.*;
 
 @Data
-public class ProjectSaleStateDO {
+public class ProjectSaleStateConstant {
 
     public static List<ProjectSaleState> projectSaleStates = new ArrayList<ProjectSaleState>() {
         {
