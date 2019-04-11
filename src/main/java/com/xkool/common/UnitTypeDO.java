@@ -25,6 +25,14 @@ public class UnitTypeDO {
         }
     };
 
+    public static List<UnitType> residenceUnitTypes = new ArrayList<UnitType>() {
+        {
+            add(new UnitType(HIGH_RISE_BUILDING_UNIT_TYPE_ID, HIGH_RISE_BUILDING_UNIT_TYPE_NAME));
+            add(new UnitType(WESTERN_STYLE_HOUSE_UNIT_TYPE_ID, WESTERN_STYLE_HOUSE_UNIT_TYPE_NAME));
+            add(new UnitType(VILLA_UNIT_TYPE_ID, VILLA_UNIT_TYPE_NAME));
+        }
+    };
+
     public static UnitType getUnitTypeByName(String name) {
         Optional<UnitType> unitTypeOptional = unitTypes.stream()
                 .filter(unitType -> unitType.getName().equals(name))
@@ -37,6 +45,10 @@ public class UnitTypeDO {
                 .filter(unitType -> unitType.getId() == id)
                 .findFirst();
         return unitTypeOptional.orElse(null);
+    }
+
+    public static List<UnitType> getResidenceUnitTypes() {
+        return residenceUnitTypes;
     }
 
     public static List<UnitType> getUnitTypes() {
