@@ -8,6 +8,10 @@ public class ProjectSaleState {
     private int id;
     private String name;
 
+    public ProjectSaleState() {
+
+    }
+
     public ProjectSaleState(int id, String name) {
         this.id = id;
         this.name = name;
