@@ -18,7 +18,7 @@ public class ProjectSaleStateConstant {
             add(new ProjectSaleState(UNSOLD_PROJECT_SALE_STATE_ID, UNSOLD_PROJECT_SALE_STATE_NAME));
             add(new ProjectSaleState(SALE_PROJECT_SALE_STATE_ID, SALE_PROJECT_SALE_STATE_NAME));
             add(new ProjectSaleState(FOR_SALE_PROJECT_SALE_STATE_ID, FOR_SALE_PROJECT_SALE_STATE_NAME));
-            add(new ProjectSaleState(SOLD_OUT_PROJECT_SALE_STATE_ID, FOR_SALE_PROJECT_SALE_STATE_NAME));
+            add(new ProjectSaleState(SOLD_OUT_PROJECT_SALE_STATE_ID, SOLD_OUT_PROJECT_SALE_STATE_NAME));
         }
     };
 
