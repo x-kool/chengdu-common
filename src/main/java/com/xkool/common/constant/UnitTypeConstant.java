@@ -11,7 +11,7 @@ import static com.xkool.common.constant.UnitTypeNameConstant.*;
 
 public class UnitTypeConstant {
 
-    public static List<UnitType> unitTypes = new ArrayList<UnitType>() {
+    private static List<UnitType> unitTypes = new ArrayList<UnitType>() {
         {
             add(new UnitType(HIGH_RISE_BUILDING_UNIT_TYPE_ID, HIGH_RISE_BUILDING_UNIT_TYPE_NAME));
             add(new UnitType(WESTERN_STYLE_HOUSE_UNIT_TYPE_ID, WESTERN_STYLE_HOUSE_UNIT_TYPE_NAME));
@@ -27,11 +27,22 @@ public class UnitTypeConstant {
         }
     };
 
-    public static List<UnitType> residenceUnitTypes = new ArrayList<UnitType>() {
+    private static List<UnitType> residenceUnitTypes = new ArrayList<UnitType>() {
         {
             add(new UnitType(HIGH_RISE_BUILDING_UNIT_TYPE_ID, HIGH_RISE_BUILDING_UNIT_TYPE_NAME));
             add(new UnitType(WESTERN_STYLE_HOUSE_UNIT_TYPE_ID, WESTERN_STYLE_HOUSE_UNIT_TYPE_NAME));
             add(new UnitType(VILLA_UNIT_TYPE_ID, VILLA_UNIT_TYPE_NAME));
+        }
+    };
+
+    private static List<UnitType> estateUnitTypes = new ArrayList<UnitType>() {
+        {
+            add(new UnitType(HIGH_RISE_BUILDING_UNIT_TYPE_ID, HIGH_RISE_BUILDING_UNIT_TYPE_NAME));
+            add(new UnitType(WESTERN_STYLE_HOUSE_UNIT_TYPE_ID, WESTERN_STYLE_HOUSE_UNIT_TYPE_NAME));
+            add(new UnitType(VILLA_UNIT_TYPE_ID, VILLA_UNIT_TYPE_NAME));
+            add(new UnitType(STORE_UNIT_TYPE_ID, STORE_UNIT_TYPE_NAME));
+            add(new UnitType(OFFICE_BUILDING_UNIT_TYPE_ID, OFFICE_BUILDING_UNIT_TYPE_NAME));
+            add(new UnitType(CONDO_UNIT_TYPE_ID, CONDO_UNIT_TYPE_NAME));
         }
     };
 
@@ -51,6 +62,10 @@ public class UnitTypeConstant {
 
     public static List<UnitType> getResidenceUnitTypes() {
         return residenceUnitTypes;
+    }
+
+    public static List<UnitType> getEstateUnitTypes() {
+        return estateUnitTypes;
     }
 
     public static List<UnitType> getUnitTypes() {
